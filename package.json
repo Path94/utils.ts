@@ -3,7 +3,17 @@
   "version": "0.1.0",
   "description": "Utilities library pack",
   "main": "utils.js",
-  "repository": "github.com/Path94/utils.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Path94/utils.ts.git"
+  },
   "author": "Path94",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Path94/utils.ts/issues"
+  },
+  "homepage": "https://github.com/Path94/utils.ts#readme"
 }
