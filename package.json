@@ -1,0 +1,9 @@
+{
+  "name": "utils.ts",
+  "version": "0.1.0",
+  "description": "Utilities library pack",
+  "main": "utils.js",
+  "repository": "github.com/Path94/utils.ts",
+  "author": "Path94",
+  "license": "MIT"
+}
