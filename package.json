@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Path94/utils.ts/issues"
   },
+  "dependencies": {
+    "errors.js": "github:Path94/errors.js"
+  },
   "homepage": "https://github.com/Path94/utils.ts#readme"
 }
