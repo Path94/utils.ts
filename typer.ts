@@ -7,7 +7,7 @@ export enum Types {
 	Array
 }
 
-function Get(val: any): Types {
+export function Get(val: any): Types {
 	if (val === null) {
 		return Types.Null;
 	}
