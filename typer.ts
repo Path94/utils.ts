@@ -23,7 +23,7 @@ export function Get(val: any): Types {
 		case "string":
 			return Types.String;
 		case "boolean":
-			return Types.String;
+			return Types.Boolean;
 		case "object":
 			const o = <{}>val;
 			if (o.constructor === Array) {
