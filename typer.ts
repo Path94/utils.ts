@@ -17,30 +17,30 @@ export function Get(val: any): Types {
 		return Types.Undefined;
 	}
 
-	if (typeof val === "number") {
-		return Types.Number;
-	}
+	switch (typeof val) {
+		case "number":
+			return Types.Number;
+		case "string":
+			return Types.String;
+		case "boolean":
+			return Types.String;
+		case "object":
+			const o = <{}>val;
+			if (o.constructor === Array) {
+				return Types.Array;
+			}
 
-	if (typeof val === "string") {
-		return Types.String;
-	}
+			return Types.Object;
 
-	if (typeof val !== "object") {
-		console.error("unsupported type, please look into implementing:", val);
-		return Types.Null;
+		default:
+			console.error("unsupported type, please look into implementing:", val);
+			return Types.Null;
 	}
-
-	const o = <{}>val;
-	if (o.constructor === Array) {
-		return Types.Array;
-	}
-
-	return Types.Object;
 }
 
-export function ToString(type: Types){
-	switch(type){
+export function ToString(type: Types) {
+	switch (type) {
 		case Types.Null:
-		break;
+			break;
 	}
 }
