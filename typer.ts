@@ -3,6 +3,7 @@ export enum Types {
 	Undefined,
 	Number,
 	String,
+	Boolean,
 	Object,
 	Array
 }
