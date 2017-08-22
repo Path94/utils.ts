@@ -12,7 +12,7 @@ export function GetSeconds(delta: number): string {
 		return "1 second ago"
 	}
 
-	return delta.toString() + " seconds ago";
+	return delta.toFixed(0) + " seconds ago";
 }
 
 export function GetMinutes(delta: number): string {
@@ -21,7 +21,7 @@ export function GetMinutes(delta: number): string {
 		return "1 minute ago"
 	}
 
-	return mins.toString() + " minutes ago";
+	return mins.toFixed(0) + " minutes ago";
 }
 
 export function GetHours(delta: number): string {
@@ -30,7 +30,7 @@ export function GetHours(delta: number): string {
 		return "1 hour ago"
 	}
 
-	return hours.toString() + " hours ago";
+	return hours.toFixed(0) + " hours ago";
 }
 
 export function GetFormatted(delta: number): string {
