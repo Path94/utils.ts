@@ -1,4 +1,8 @@
-export function Now():number {
+const secondMS = 1000;
+const minuteMS = secondMS * 60;
+const hourMS = minuteMS * 60;
+
+export function Now(): number {
 	return Math.round(Date.now() / 1000);
 }
 
@@ -42,5 +46,16 @@ export function GetFormatted(delta: number): string {
 		return GetMinutes(delta);
 	} else {
 		return GetHours(delta);
+	}
+}
+
+// GetNext will return the next time to check from a given milliseconds delta 
+export function GetNext(ms: number) {
+	if (ms < minuteMS) {
+		return secondMS;
+	} else if (ms < hourMS) {
+		return minuteMS;
+	} else {
+		return hourMS;
 	}
 }
