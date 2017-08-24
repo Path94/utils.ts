@@ -41,7 +41,7 @@ export function GetFormatted(delta: number): string {
 	if (delta < 1) {
 		return "Just now";
 	} else if (delta < 60) {
-		return GetSeconds(delta);
+		return "Less than a minute";
 	} else if (delta < 3600) {
 		return GetMinutes(delta);
 	} else {
