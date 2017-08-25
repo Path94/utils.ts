@@ -1,4 +1,4 @@
-class Waiter {
+export class Waiter {
 	private done: resolveFn;
 	private p: Promise<void>;
 	private n: number;
