@@ -4,17 +4,13 @@ export class Waiter {
 	private n: number;
 
 	constructor() {
-		this.p = new Promise<void>(this.init);
+		this.p = new Promise<void>((resolve: resolveFn) => this.done = resolve);
 		this.n = 0;
-	}
-
-	private init(resolve: resolveFn) {
-		this.done = resolve;
 	}
 
 	Add(n: number) {
 		if (this.n === 0) {
-			this.p = new Promise<void>(this.init);
+			this.p = new Promise<void>((resolve: resolveFn) => this.done = resolve);
 		}
 
 		this.n += n;
@@ -27,7 +23,7 @@ export class Waiter {
 		}
 
 		this.n--;
-		
+
 		switch (this.n) {
 			case 0:
 				this.done();
