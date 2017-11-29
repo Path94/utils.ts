@@ -42,5 +42,5 @@ export async function Wait(ms: number) {
 }
 
 export interface Parent {
-	appendChild(e: HTMLElement): void
+	appendChild(e: HTMLElement | DocumentFragment): void
 }
