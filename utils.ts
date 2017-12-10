@@ -37,10 +37,23 @@ export function IsContainedWithin(parent: HTMLElement, child: HTMLElement): bool
 export async function Wait(ms: number) {
 	let done: () => void;
 	const p = new Promise<void>((res: () => void) => done = res);
-	setTimeout(() => { done(); }, ms);
+	setTimeout(() => done(), ms);
 	await p;
 }
 
 export interface Parent {
 	appendChild(e: HTMLElement | DocumentFragment): void
 }
+
+export class KV<T> {
+	readonly key: string;
+	readonly value: T;
+
+	constructor(key: string, value: T) {
+		this.key = key;
+		this.value = value;
+	}
+}
+
+export type Waiter = Promise<void>;
+
