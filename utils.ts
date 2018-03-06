@@ -12,7 +12,7 @@ export class Response<T> {
 }
 
 // RemoveElement will safely remove an element from the DOM
-export function RemoveElement(e: HTMLElement) {
+export function RemoveElement(e: Child) {
 	const p = e.parentNode;
 	if (p === null) {
 		return;
@@ -23,6 +23,10 @@ export function RemoveElement(e: HTMLElement) {
 
 // IsContainedWithin will detect if an element is contained within a parent
 export function IsContainedWithin(parent: HTMLElement, child: HTMLElement): boolean {
+	if (child === parent) {
+		return true;
+	}
+
 	while (child.parentElement !== null) {
 		if (parent === child.parentElement) {
 			return true;
@@ -42,8 +46,11 @@ export async function Wait(ms: number) {
 }
 
 export interface Parent {
-	appendChild(e: HTMLElement | DocumentFragment): void
+	appendChild(child: Child): void
+	insertBefore(child: Child, before: Child | null): void
 }
+
+export type Child = HTMLElement | DocumentFragment | SVGElement | Node;
 
 export class KV<T> {
 	readonly key: string;
