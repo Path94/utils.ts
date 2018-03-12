@@ -62,5 +62,13 @@ export class KV<T> {
 	}
 }
 
-export type Waiter = Promise<void>;
+export type EmptyCallback = () => void;
 
+export function Random(min: number, max: number): number {
+	min = Math.floor(min)
+	max = Math.floor(max)
+	const seed = Math.random();
+	const delta = max - min;
+	const rand = min + (seed * delta)
+	return Math.round(rand);
+}
