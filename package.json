@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Path94/utils.ts.git"
+    "url": "git+https://github.com/PathDNA/utils.ts.git"
   },
-  "author": "Path94",
+  "author": "PathDNA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Path94/utils.ts/issues"
+    "url": "https://github.com/PathDNA/utils.ts/issues"
   },
   "dependencies": {
-    "errors.js": "github:Path94/errors.js"
+    "errors.js": "github:PathDNA/errors.js"
   },
-  "homepage": "https://github.com/Path94/utils.ts#readme"
+  "homepage": "https://github.com/PathDNA/utils.ts#readme"
 }
