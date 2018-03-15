@@ -4,6 +4,7 @@ export class Waiter {
 	private n: number;
 
 	constructor() {
+		this.done = () => { };
 		this.p = new Promise<void>((resolve: resolveFn) => this.done = resolve);
 		this.n = 0;
 	}
