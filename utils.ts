@@ -45,6 +45,8 @@ export async function Wait(ms: number) {
 	await p;
 }
 
+export type Waiter = Promise<void>;
+
 export interface Parent {
 	appendChild(child: Child): void
 	insertBefore(child: Child, before: Child | null): void
